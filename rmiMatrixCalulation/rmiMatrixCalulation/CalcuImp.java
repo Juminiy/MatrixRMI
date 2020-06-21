@@ -5,7 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class CalcuImp extends UnicastRemoteObject implements CalcuInterface {
     private String SName;
-    private MatrixCalculation mCal;
+    private rmiMatrixCalulation.MatrixCalculation mCal;
     public CalcuImp(String SName) throws RemoteException {
         super();
         this.SName=SName;
@@ -14,10 +14,9 @@ public class CalcuImp extends UnicastRemoteObject implements CalcuInterface {
         super();
     }
 
-    @Override
-    public Matrix add(Matrix p1, Matrix p2) throws RemoteException, MatrixFormatException {
-        mCal=new MatrixCalculation(p1,p2);
-        System.out.println(SName+"进行了乘法运算,结果为 : ");
+    public Matrix add(rmiMatrixCalulation.Matrix p1, Matrix p2) throws RemoteException, MatrixFormatException {
+        mCal=new rmiMatrixCalulation.MatrixCalculation(p1,p2);
+        System.out.println(SName+"进行了加法运算,结果为 : ");
         mCal.Add().OutputMatrix();
         return mCal.Add();
     }
@@ -25,7 +24,7 @@ public class CalcuImp extends UnicastRemoteObject implements CalcuInterface {
     @Override
     public Matrix plus(Matrix p1, Matrix p2) throws RemoteException, MatrixFormatException {
         mCal=new MatrixCalculation(p1,p2);
-        System.out.println(SName+"进行了加法运算,结果为 : ");
+        System.out.println(SName+"进行了乘法运算,结果为 : ");
         mCal.Plus().OutputMatrix();
         return mCal.Plus();
     }
