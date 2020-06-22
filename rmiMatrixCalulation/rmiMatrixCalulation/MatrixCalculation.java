@@ -46,18 +46,5 @@ public class MatrixCalculation implements  Serializable{//可以序列化 能够
         return  result;
     }
 
-//    public static void main(String[] args) {
-//        Matrix m1=new Matrix(5,3);
-//        System.out.println("Matrix 1 : ");
-//        m1.InputMatrix();
-//        Matrix m2=new Matrix(3,2);
-//        System.out.println("Matrix 2 : ");
-//        m2.InputMatrix();
-//        System.out.println("result : ");
-//        MatrixCalculation matrixCalculation=new MatrixCalculation(m1,m2);
-//
-////        matrixCalculation.Add().OutputMatrix();
-//        matrixCalculation.Plus().OutputMatrix();
-//
 //    }
 }

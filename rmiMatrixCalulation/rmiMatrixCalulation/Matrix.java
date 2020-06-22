@@ -63,15 +63,5 @@ public class Matrix implements Serializable{//必须可以序列化 能够进行
         }
         return result;
     }
-    //把Matrix 的String 以字节流方式建立
-    public String toString(){
-        StringBuilder sb=new StringBuilder();
-        for(int i=1;i<=m;i++){
-            for(int j=1;j<=n;j++) {
-                sb.append(matrix[i][j]+" ");
-            }
-            sb.append('\n');
-        }
-        return sb.toString();
-    }
+
 }
